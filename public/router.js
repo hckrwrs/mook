@@ -8,7 +8,7 @@ var URL_BASE = 'http://seishun-api.pocke.me';
 function create_url(endpoint) {
   // TODO: ここを書き換えてURL作る
   // return '/api/guchi' + endpoint
-  return URL_BASE + '/guchi/' + endpoint;
+  return URL_BASE + '/deai/' + endpoint;
 }
 
 var MasterData = $.ajax({
