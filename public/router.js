@@ -149,7 +149,7 @@ router.map({
               guchi_id: guchi_id,
             }),
           }).done(function (data, status, xhr) {
-            router.go('/guchis/' + guchi_id);
+            location.reload();
           });
         },
       },
