@@ -33,7 +33,7 @@
 <script id="sign_in" type="text/template">
     <div class="text-center">
       <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
-        <span class="text-success">Mook</span> <span style="color:#ccc; text-shadow:0 1px #fff"></span>
+        <span class="text-success" style="color: #f3ce85">Mook</span> <span style="color:#f3ce85; text-shadow:0 1px #f3ce85"></span>
       </h2>
     </div>
     <div class="login-widget animation-delay1">
@@ -44,7 +44,7 @@
               <label>あなたのニックネーム</label>
               <input type="text" class="form-control input-sm bounceIn animation-delay2" v-model="name">
             </div>
-            <a class="btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right" v-on:click="sign_in()"><i class="fa fa-sign-in"></i> Sign in</a>
+            <a class="btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right" v-on:click="sign_in()" style="background-color: #f3ce85; border-color: #f3ce85;"><i class="fa fa-sign-in"></i> Sign in</a>
           </form>
         </div>
       </div><!-- /panel -->
@@ -54,7 +54,7 @@
 <script id="sign_up" type="text/template">
   <div class="text-center">
       <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
-        <span class="text-success">Sign up Mook</span> <span style="color:#ccc; text-shadow:0 1px #fff"></span>
+        <span class="text-success">Sign up Mook</span> <span style="color:#f3ce85; text-shadow:0 1px #fff"></span>
       </h2>
     </div>
   <div class="panel panel-default">
@@ -137,139 +137,21 @@
   <button @click="submit()">リプライする</button> -->
 </script>
 
-<script id="replies" type="text/template">
+<!-- <script id="replies" type="text/template">
   <div class="chat chat-inner">
     <g-header title="Hhread" path="/guchi"></g-header>
     <div class="chat-header bg-white border-bottom padding-sm" style="height: 40px;">
       はなみずつらいさん
     </div>
 
-    <div class="chat-message">
-      <ul class="chat">
-        <li class="left clearfix">
-          <span class="chat-img pull-left">
-            <img src="img/user.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">John Doe</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 12 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-        </li>
-        <li class="right clearfix">
-          <span class="chat-img pull-right">
-            <img src="img/user3.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Sarah</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-            </p>
-          </div>
-        </li>
-        <li class="left clearfix">
-          <span class="chat-img pull-left">
-            <img src="img/user4.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Angelina</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 20 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-        </li>
-        <li class="right clearfix">
-          <span class="chat-img pull-right">
-            <img src="img/user2.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Jane Doe</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 25 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-            </p>
-          </div>
-        </li>
-        <li class="left clearfix">
-          <span class="chat-img pull-left">
-            <img src="img/user5.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Kate</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 12 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-        </li>
-        <li class="right clearfix">
-          <span class="chat-img pull-right">
-            <img src="img/user3.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Sarah</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-            </p>
-          </div>
-        </li>
-        <li class="left clearfix">
-          <span class="chat-img pull-left">
-            <img src="img/user.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">John Doe</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 20 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-        </li>
-        <li class="right clearfix">
-          <span class="chat-img pull-right">
-            <img src="img/user2.jpg" alt="User Avatar">
-          </span>
-          <div class="chat-body clearfix">
-            <div class="header">
-              <strong class="primary-font">Jane Doe</strong>
-              <small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 25 mins ago</small>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
+
     <div class="chat-box bg-white">
       <div class="input-group">
         <input class="form-control border no-shadow no-rounded" placeholder="Type your message here">
         <span class="input-group-btn">
           <button class="btn btn-success no-rounded" type="button">Send</button>
         </span>
-      </div><!-- /input-group -->
-    </div>
-  </div>
-</script>
+      </div /input-group -->
 
 
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
