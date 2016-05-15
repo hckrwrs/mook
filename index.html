@@ -130,16 +130,18 @@
     <a href="#!/replies">
       <div class="panel-body">
         <div class="clearfix">
-          <img src="img/user.jpg" class="img-circle" style="width:100px;" alt="User Avatar">
+          <img :src="reply.guchi_user_icon_value" class="img-circle" style="width:100px;" alt="User Avatar">
           <span class="badge badge-info pull-right">3</span>
-          <strong class="block">{{reply.deai_user.name}}</strong>
-          <small class="text-muted">{{reply.created_at}</small>
+          <strong class="block">{{reply.guchi_user.name}}</strong>
+          <small class="text-muted">{{reply.created_at}}</small>
         </div>
         <div class="seperator"></div>
-        <p>TODO: 最新のメッセージ</p>
+        <p>{{reply.content}}</p>
       </div>
     </a>
   </div>
+  <input type="text" v-model="reply_text">
+  <button @click="submit()">リプライする</button>
 </script>
 
 <script id="replies" type="text/template">
