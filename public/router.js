@@ -149,8 +149,7 @@ router.map({
               guchi_id: guchi_id,
             }),
           }).done(function (data, status, xhr) {
-            self.guchi.replies.unshift(data.data);
-            self.reply_text = "";
+            location.reload();
           });
         },
       },
