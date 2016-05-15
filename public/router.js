@@ -4,7 +4,7 @@ var router = new VueRouter();
 
 
 var URL_BASE = 'http://seishun-api.pocke.me';
-// var URL_BASE = 'http://192.168.100.246:3000';
+ //var URL_BASE = 'http://192.168.100.246:3000';
 function create_url(endpoint) {
   // TODO: ここを書き換えてURL作る
   // return '/api/guchi' + endpoint

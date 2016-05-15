@@ -22,7 +22,7 @@
 </body>
 
 <script id="g-header" type="text/template">
-  <div class="main-header clearfix" style="width:100%; position: fixed;top:0; left:0; background-color:#CCCCFF;z-index:2000;">
+  <div class="main-header clearfix" style="width:100%; position: fixed;top:0; left:0; background-color:#f3ce85;z-index:2000;">
     <a v-if="path" v-link="{ path: path }" class="pull-left btn btn-link"><i class="fa fa-arrow-left"></i></a>
     <h3 class="no-margin" style="text-align:center;">{{ title }}</h3>
   </div>
@@ -62,34 +62,32 @@
     <div class="panel-body">
       <form>
         <div class="form-group">
-          <label for="selectNickname">ニックネーム</label>
-          <input type="text" class="form-control input-sm" id="nickname" placeholder="Enter your nickname">
+          <label for="selectNickname">ニックネーム</label><br>
+          <input type="text" class="form-control input-sm" id="nickname"placeholder="Enter your nickname">
         </div>
         <div class="form-group">
-          <label for="selectIcon">アイコン</label>
-          <div class="col-lg-10">
+          <label for="selectIcon">アイコン</label><br>
             <select class="form-control chzn-select" v-model="selected">
               <option v-for="Icon in icons" v-bind:value="Icon.value">{{Icon.name}}</option>
             </select>
-            <input type="radio" :value="Icon.id"><img :src="selected"></img>
-          </div>
-
+            <input type="radio" :value="Icon.id"></input>
+            <p style="margin-bottom:1em;" ></p>
+            <img :src="selected"></img>
         </div>
         <div class="form-group">
           <label class="col-lg-2 control-label">性別</label>
           <div class="col-lg-10">
             <label class="label-radio　inline">
-              <input type="checkbox" value="1">
+              <input type="radio" name="stack-radio" value="male">
               <span class="custom-radio"></span>
               男性
             </label>
             <label class="label-checkbox inline">
-              <input type="checkbox" value="2">
+              <input type="radio" name="stack-radio" value="female">
               <span class="custom-radio"></span>
               女性
             </label>
-          </div><!-- /.col -->
-        <button type="submit" class="btn btn-success btn-sm">Submit</button>
+          </div>
       </form>
       <a class="btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right" v-on:click="sign_up()"><i class="fa fa-sign-in"></i> Sign up</a>
     </div>
