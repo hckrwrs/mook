@@ -109,7 +109,7 @@
     <a v-link="{ name: 'guchi', params: {guchi_id: guchi.id} }">
       <div class="panel-body">
         <div class="clearfix">
-          <span class="label label-danger pull-right">new!!</span>
+          <span class="label label-danger pull-right"></span>
         </div>
         <div class="seperator"></div>
         <p>{{guchi.content}}</p>
@@ -121,20 +121,18 @@
 </script>
 
 <script id="guchi" type="text/template">
-  <g-header title="Comments" path="/guchis"></g-header>
+  <g-header title="会話中" path="/guchis"></g-header>
   <div class="panel" v-for="reply in guchi.replies">
-    <a href="#!/replies">
-      <div class="panel-body">
-        <div class="clearfix">
-          <img :src="reply.is_guching ? reply.guchi_user_icon_value : deai_user.icon.value" class="img-circle" style="width:100px;" alt="User Avatar">
-          <span class="badge badge-info pull-right">3</span>
-          <strong class="block">{{reply.is_guching ? reply.guchi_user.name : deai_user.name}}</strong>
-          <small class="text-muted">{{reply.created_at}}</small>
-        </div>
-        <div class="seperator"></div>
-        <p>{{reply.content}}</p>
+    <div class="panel-body">
+      <div class="clearfix">
+        <img :src="reply.is_guching ? reply.guchi_user_icon_value : deai_user.icon.value" class="img-circle" style="width:100px;" alt="User Avatar">
+        <span class="badge badge-info pull-right"></span>
+        <strong class="block">{{reply.is_guching ? reply.guchi_user.name : deai_user.name}}</strong>
+        <small class="text-muted">{{reply.created_at}}</small>
       </div>
-    </a>
+      <div class="seperator"></div>
+      <p>{{reply.content}}</p>
+    </div>
   </div>
   <input type="text" v-model="reply_text">
   <button @click="submit()">リプライする</button>
