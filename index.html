@@ -93,35 +93,22 @@
 </script>
 
 <script id="guchis" type="text/template">
-  <g-header title="Home"></g-header>
+  <g-header title="みんなのグチ"></g-header>
 
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <form class="form-inline no-margin">
-        <div class="media">
-          <img :src=user.icon.value class="thumbnail pull-left" style="width:32px; height:32px;"></img>
-        </div>
-      </form>
-    </div>
-  </div>
 
   <div class="panel" v-for="guchi in guchis">
     <a v-link="{ name: 'guchi', params: {guchi_id: guchi.id} }">
       <div class="panel-body">
-        <div class="clearfix">
-          <span class="label label-danger pull-right">new!!</span>
-        </div>
         <div class="seperator"></div>
         <p>{{guchi.content}}</p>
         <div class="text-muted">{{guchi.created_at}}</div>
-        <div class="badge badge-info" style="float: right">3</div>
       </div>
     </a>
   </div>
 </script>
 
 <script id="guchi" type="text/template">
-  <g-header title="Comments" path="/guchis"></g-header>
+  <g-header title="会話中" path="/guchis"></g-header>
   <div class="panel" v-for="reply in guchi.replies">
     <a href="#!/replies">
       <div class="panel-body">
