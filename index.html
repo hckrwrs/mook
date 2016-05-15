@@ -130,9 +130,9 @@
     <a href="#!/replies">
       <div class="panel-body">
         <div class="clearfix">
-          <img :src="reply.guchi_user_icon_value" class="img-circle" style="width:100px;" alt="User Avatar">
+          <img :src="reply.is_guching ? reply.guchi_user_icon_value : deai_user.icon.value" class="img-circle" style="width:100px;" alt="User Avatar">
           <span class="badge badge-info pull-right">3</span>
-          <strong class="block">{{reply.guchi_user.name}}</strong>
+          <strong class="block">{{reply.is_guching ? reply.guchi_user.name : deai_user.name}}</strong>
           <small class="text-muted">{{reply.created_at}}</small>
         </div>
         <div class="seperator"></div>
